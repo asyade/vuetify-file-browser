@@ -11,7 +11,7 @@
             v-on:add-files="addUploadingFiles"
             v-on:folder-created="refreshPending = true"
         ></toolbar>
-        <v-row no-gutters>
+        <v-row class="fit-parent" no-gutters>
             <v-col v-if="tree && $vuetify.breakpoint.smAndUp" sm="auto">
                 <tree
                     :path="path"
@@ -224,4 +224,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.fit-parent {
+    height: calc(100% - 48px);
+}
+
 </style>
